@@ -46,7 +46,7 @@ body {
 }
 .logo:hover {
 	cursor: pointer;
-	animation: moveInLeft 1s ease-out;
+	animation: moveInLeft 1s 0.5s ease-out;
 }
 .text-box {
 	position: absolute;
@@ -56,6 +56,7 @@ body {
 		-50%,
 		-50%
 	); /*repositions an element in the horizontal and vertical directions */
+	text-align: center;
 }
 
 .heading-primary {
@@ -112,4 +113,82 @@ body {
 		opacity: 1;
 		transform: translate(0);
 	}
+}
+
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	80% {
+		transform: -20px;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+.btn:link,
+.btn:visited {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 55px;
+	margin-top: 60px;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	position: relative;
+}
+.btn:hover {
+	/* transform: translate(0, -5px); */
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.btn:active {
+	transform: translateY(
+		-10px
+	); /*move the button down 1px after clicking on it(hold the click to notice the effect) */
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #7ed56f;
+}
+
+.btn::after {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 55px;
+
+	background-color: #7ed56f;
+	transition: all 0.3s ease-in-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all .4s;
+}
+
+.btn-white::after {
+	background-color: #fff;
+}
+
+.btn:hover::after{
+	transform: scaleX(1.5) scaleY(1.5);
+	opacity: 0;
+
+
+}
+
+.btn-animated{
+	animation: moveInBottom 1s 0.5s ease-out;
+	/* animation-fill-mode: backwards; */
+
 }
