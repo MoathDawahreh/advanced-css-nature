@@ -55,20 +55,20 @@ body {
 	position: relative; /*making the parent of logo-box relative so the 40rem height is based on it */
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-.logo-box {
+.header__logo-box {
 	position: absolute;
 	top: 4rem;
 	left: 4rem;
 }
 
-.logo {
+.header__logo {
 	height: 3.5rem;
 }
 .logo:hover {
 	cursor: pointer;
 	animation: moveInLeft 1s 0.5s ease-out;
 }
-.text-box {
+.header__text-box {
 	position: absolute;
 	top: 40%;
 	left: 50%;
@@ -86,24 +86,25 @@ body {
 	margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
 	display: block;
 	font-size: 6rem;
 	font-weight: 400;
 	letter-spacing: 3rem;
 	animation-name: moveInLeft;
 	animation-duration: 1s;
-	animation-delay: 0.5s; /*delay the animation by 1 second */
+	/* animation-delay: 0.5s; */
+	 /*delay the animation by 1 second */
 	/* animation-iteration-count: 2; */
 	animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
 	display: block;
 	font-size: 2rem;
 	font-weight: 700;
 	letter-spacing: 1.5rem;
-	animation: moveInRight 1s 0.5s ease-out;
+	animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
@@ -162,7 +163,7 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 0.15rem;
 	text-decoration: none;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.3s;
 	position: relative;
 }
 .btn:hover {
@@ -177,7 +178,7 @@ body {
 	box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-.btn-white {
+.btn--white {
 	background-color: #fff;
 	color: #7ed56f;
 }
@@ -190,15 +191,14 @@ body {
 	border-radius: 5.5rem;
 
 	background-color: #7ed56f;
-	transition: all 0.3s ease-in-out;
-	position: absolute;
+ 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -1;
 	transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
 	background-color: #fff;
 }
 
@@ -207,7 +207,7 @@ body {
 	opacity: 0;
 }
 
-.btn-animated {
-	animation: moveInBottom 1s 0.5s ease-out;
+.btn--animated {
+	animation: moveInBottom 1s ease-out  ;
 	/* animation-fill-mode: backwards; */
 }
