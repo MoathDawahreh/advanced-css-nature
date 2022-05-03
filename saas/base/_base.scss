@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	/* font-size: 10px; */
+	/*root font size/  10px = 1rem/ We are declaring font-size in the html elment
+	because rem is relevant to it and by doing this we can create responsive website since all rems below will be  based on the font-size  here -changing the size will
+	change the whole webiste size-
+	So if we want the designe to be responsive in mobile we can just change the font-size in the html element to 5px -try it in the browser :))-
+	*/
+	/* a good practice is not even using px here so we use percantage this way if the user changes the size of color the website will stil responsive
+	the default font size is 16 px so if we made the font size 100% that would be 16px * 100% = 16px
+	
+	Since we want our site to have 10 px not 16px we can get the percentage of the font size by dividing it by 16px
+	so 10px = 10 / 16 = 0.625%
+	 
+
+	*/
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}

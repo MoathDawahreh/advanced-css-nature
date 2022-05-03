@@ -1,0 +1,39 @@
+.header {
+	height: 95vh;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
+		),
+		url('../img/hero.jpg');
+	background-size: cover;
+	background-position: top;
+	position: relative; /*making the parent of logo-box relative so the 40rem height is based on it */
+	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+	&__logo-box {
+		// Nesting in saas ...  "&" is used to access the parent element of the class i.e &__logo-box = .header__logo-box
+		position: absolute;
+		top: 4rem;
+		left: 4rem;
+	}
+
+	&__text-box {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(
+			-50%,
+			-50%
+		); /*repositions an element in the horizontal and vertical directions */
+		text-align: center;
+	}
+
+	&__logo {
+		height: 3.5rem;
+		&:hover {
+			cursor: pointer;
+			animation: moveInLeft 1s 0.5s ease-out;
+		}
+	}
+}
