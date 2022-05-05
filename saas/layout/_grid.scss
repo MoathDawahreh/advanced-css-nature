@@ -1,6 +1,6 @@
 .row {
 	max-width: $grid-width;
-	background-color: bisque;
+	// background-color: bisque;
 	margin: 0 auto;
 	// margin-bottom: $gutter-vertical;
 	display: flex;
@@ -13,7 +13,7 @@
 
 	[class^='col-'] {
 		// this will select all elements with class starting with col-
-		background-color: aqua;
+		// background-color: aqua;
 		&:not(:last-child) {
 			//this gives a margin-right for all elements except the last child
 			margin-right: $gutter-horizontal;
