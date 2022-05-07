@@ -1,6 +1,26 @@
 .section-about {
-    background-color: $color-gray-light;
-    padding:25rem 0;
-    margin-top: -20vh;
+	background-color: $color-gray-light;
+	padding: 25rem 0;
+	margin-top: -20vh;
+}
 
+.section-features {
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
+		),
+		url('../img/nat-4.jpg');
+	padding: 25rem 0;
+	margin-top: -20vh;
+	background-size: cover;
+	transform: skew(0deg, -2deg);
+
+	& > * {
+		// * is used to access all the child elements of the class
+		transform: skew(
+			0deg,
+			2deg
+		); // because skewing the whole section up caused skewing the featuer-boxes as well we are skewwing it back so it goes normal
+	}
 }
