@@ -259,6 +259,42 @@ body {
   transform: scale(0.9);
 }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  -webkit-perspective: 150rem;
+  position: relative;
+  height: 55rem;
+}
+.card__side {
+  height: 55rem;
+  transition: all 0.8s ease;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+.card__side--front {
+  background-color: orangered;
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card__side--back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card:hover .card__side--front {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
@@ -362,6 +398,12 @@ body {
 }
 .section-features > * {
   transform: skew(0deg, 2deg);
+}
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }
 
 /*# sourceMappingURL=style.css.map */

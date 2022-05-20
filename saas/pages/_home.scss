@@ -24,3 +24,10 @@
 		); // because skewing the whole section up caused skewing the featuer-boxes as well we are skewwing it back so it goes normal
 	}
 }
+
+.section-tours{
+	background-color: $color-gray-light;
+	padding: 25rem 0;
+	margin-top: -20vh;
+
+}
