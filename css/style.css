@@ -269,8 +269,6 @@ body {
 .card__side {
   height: 55rem;
   transition: all 0.8s ease;
-  color: #fff;
-  font-size: 2rem;
   overflow: hidden;
   position: absolute;
   backface-visibility: hidden;
@@ -279,9 +277,6 @@ body {
   width: 100%;
   border-radius: 0.5rem;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
-}
-.card__side--front {
-  background-color: orangered;
 }
 .card__side--back {
   transform: rotateY(180deg);
@@ -310,6 +305,28 @@ body {
 }
 .card__picture--3 {
   background-image: url(../img/nat-7.jpg);
+}
+.card__heading {
+  padding: 2rem;
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 60%;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+.card__heading-span {
+  padding: 1rem 1.5rem;
+  -webkit-box-direction-break: clone;
+  box-decoration-break: clone;
+}
+.card__heading-span--1 {
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
 }
 
 .feature-box {
