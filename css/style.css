@@ -328,6 +328,23 @@ body {
 .card__heading-span--1 {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
 }
+.card__details {
+  padding: 3rem;
+}
+.card__details ul {
+  list-style: none;
+  font-weight: 300;
+  width: 80%;
+  margin: 0 auto;
+}
+.card__details ul li {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+.card__details ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
