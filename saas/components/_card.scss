@@ -68,6 +68,8 @@
 			0 calc(100% - 1px)
 		); // Safari 6.1+ and FF3.5+
 		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius:  5rem;
+
 
 		&--1 {
 			background-image: linear-gradient(
