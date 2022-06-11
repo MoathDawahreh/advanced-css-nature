@@ -218,22 +218,24 @@ body {
 }
 
 .btn-text:link, .btn-text:visited {
-  color: #55c57a;
+  color: #28b485;
   display: inline-block;
   padding: 1.5rem 12rem;
   border-radius: 1rem;
-  text-decoration: none;
   /* margin-top: 6rem; */
   font-size: 1.6rem;
   font-weight: 700;
-  border-bottom: 0.1rem solid #55c57a;
+  border: 0.1rem solid #55c57a;
   transition: all 0.5s;
+  background-color: #fff;
+  opacity: 0.6;
 }
 .btn-text:hover {
   transform: translateY(-0.5rem);
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 .btn-text:active {
   box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
