@@ -68,26 +68,9 @@
 
 
 	&__form {
-		// position: absolute;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
-		width: 100%;
-		max-width: 30rem;
-		padding: 2rem;
-		background-color: $color-white;
-		border-radius: 0.5rem;
-		box-shadow: 0.1rem 1.5rem 4rem rgba($color-black, 0.3);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		font-size: 1.5rem;
-		font-weight: 600;
-		color: $color-primary;
-		transition: all 0.3s ease-in-out;
-
+		padding: 6rem;
+		width: 50%;
+		 
 		// &__title {
 		// 	margin-bottom: 2rem;
 		// }

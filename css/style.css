@@ -605,21 +605,8 @@ body {
   height: 50rem;
 }
 .book__form {
-  width: 100%;
-  max-width: 30rem;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0.1rem 1.5rem 4rem rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #55c57a;
-  transition: all 0.3s ease-in-out;
+  padding: 6rem;
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
