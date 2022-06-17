@@ -510,14 +510,15 @@ body {
   width: 100%;
   display: block;
   color: inherit;
+  transition: all 0.3s;
 }
 .form__input:focus {
   outline: none;
-  border: 0.3rem solid #55c57a;
+  border-bottom: 0.3rem solid #55c57a;
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(85, 197, 122, 0.3);
 }
 .form__input:focus:invalid {
-  border: 0.3rem solid #ff7730;
+  border-bottom: 0.3rem solid #ff7730;
   box-shadow: 0.1rem 0.1rem 0.5rem rgba(255, 0, 0, 0.3);
 }
 .form::-webkit-input-placeholder {

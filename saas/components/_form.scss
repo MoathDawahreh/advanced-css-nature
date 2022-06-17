@@ -13,14 +13,17 @@
 		width: 100%;
 		display: block;
 		color: inherit;
+		transition: all .3s  ;
+
 		&:focus {
 			outline: none;
-			border: 0.3rem solid $color-primary;
+			// border: 0.3rem solid $color-primary;
+			border-bottom: 0.3rem solid $color-primary;
 			box-shadow: 0.1rem 0.1rem 0.5rem rgba($color-primary, 0.3);
 		}
 
 		&:focus:invalid {
-			border: 0.3rem solid $color-secondary-dark;
+			border-bottom: 0.3rem solid $color-secondary-dark;
 			box-shadow: 0.1rem 0.1rem 0.5rem rgba(red, 0.3);
 		}
 	}
