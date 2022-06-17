@@ -496,6 +496,45 @@ body {
   filter: blur(5px) brightness(80%);
 }
 
+.form__group {
+  margin-bottom: 2rem;
+}
+.form__input {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 0.2rem;
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+  width: 100%;
+  display: block;
+  color: inherit;
+}
+.form__input:focus {
+  outline: none;
+  border: 0.3rem solid #55c57a;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(85, 197, 122, 0.3);
+}
+.form__input:focus:invalid {
+  border: 0.3rem solid #ff7730;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(255, 0, 0, 0.3);
+}
+.form::-webkit-input-placeholder {
+  color: #333;
+}
+.form__label {
+  font-size: 1.6rem;
+  margin: 1rem 2rem;
+  font-weight: bold;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+.form__input:placeholder-shown ~ .form__label {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
