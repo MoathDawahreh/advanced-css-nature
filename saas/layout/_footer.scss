@@ -1,0 +1,49 @@
+.footer{
+    background-color: $color-gray-dark-3;
+    padding: $gutter-vertical $gutter-horizontal;
+    font-size: $default-font-size;
+
+    &__logo-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: $gutter-vertical;
+    }
+
+    &__logo{
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $color-white;
+        margin-bottom: $gutter-vertical;
+    }
+    &__navigator{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: $gutter-vertical;
+    }
+    &__list{
+        display: flex;
+       
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: $gutter-vertical;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+
+    &__link{
+        font-size: $default-font-size;
+        color: $color-white;
+        text-decoration: none;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}
