@@ -1,49 +1,80 @@
-.footer{
-    background-color: $color-gray-dark-3;
-    padding: $gutter-vertical $gutter-horizontal;
-    font-size: $default-font-size;
+.footer {
+	background-color: $color-gray-dark-3;
+	padding: $gutter-vertical $gutter-horizontal;
+	font-size: $default-font-size;
 
-    &__logo-box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-bottom: $gutter-vertical;
-    }
+	&__logo-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-bottom: $gutter-vertical;
+	}
 
-    &__logo{
-        font-size: 2.4rem;
-        font-weight: 700;
-        color: $color-white;
-        margin-bottom: $gutter-vertical;
-    }
-    &__navigator{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin-bottom: $gutter-vertical;
-    }
-    &__list{
-        display: flex;
-       
-        justify-content: center;
-        flex-direction: column;
-        margin-bottom: $gutter-vertical;
-    }
-    &__item{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-     }
+	&__logo {
+		font-size: 2.4rem;
+		font-weight: 700;
+		color: $color-white;
+		margin-bottom: $gutter-vertical;
+	}
+	&__navigator {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-bottom: $gutter-vertical;
+	}
 
-    &__link{
-        font-size: $default-font-size;
-        color: $color-white;
-        text-decoration: none;
-        &:hover{
-            color: $color-primary;
-        }
-    }
+	&__navigation {
+		border-top: 1px solid $color-gray-dark;
+		padding-top: 1rem;
+	}
+	&__list {
+		list-style: none;
+		// display: flex;
+		// justify-content: center;
+		// flex-direction: column;
+		// margin-bottom: $gutter-vertical;
+	}
+	&__item {
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		// flex-direction: column;
+
+		display: inline-block;
+
+		//apply margin to all items except the last one
+		&:not(:last-child) {
+			margin-right: $gutter-horizontal-small;
+		}
+	}
+
+	&__link {
+		&:link,
+		&:visited {
+			font-size: $default-font-size;
+			color: $color-white;
+			text-decoration: none;
+			// without display inline block the text wont be transformed when hover
+			display: inline-block;
+		}
+
+		&:hover,
+		:active {
+			color: $color-primary;
+			box-shadow: 0 0 0.5rem 0.5rem $color-primary;
+			transform: rotate(5deg) scale(1.7);
+		}
+	}
+
+	&__copyright {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		margin-bottom: $gutter-vertical;
+		border-top: 1px solid $color-gray-dark;
+		padding-top: 1rem;
+	}
 }
