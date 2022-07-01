@@ -705,6 +705,24 @@ body {
   padding-top: 1rem;
 }
 
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+}
+.navigation__item:not(:last-child) {
+  margin-right: 2rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;

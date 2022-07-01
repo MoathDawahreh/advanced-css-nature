@@ -1,0 +1,48 @@
+.navigation{
+    &__checkbox{
+    }
+    &__button{
+    }
+    &__background{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+
+    }
+    &__nav{
+        
+    }
+    &__list{
+        
+    }
+    &__item{
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+
+        // display: inline-block;
+
+        //apply margin to all items except the last one
+        &:not(:last-child){
+            margin-right: $gutter-horizontal-small;
+        }
+    }
+    &__link{
+        &:link,
+        &:visited{
+            font-size: $default-font-size;
+            // color: $color-white;
+            text-decoration: none;
+            // without display inline block the text wont be transformed when hover
+            display: inline-block;
+        }
+    }
+
+
+
+}
