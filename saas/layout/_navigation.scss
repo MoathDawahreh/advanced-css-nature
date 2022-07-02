@@ -1,63 +1,74 @@
-.navigation{
-    &__checkbox{
-        display: none;
-    }
-    &__button{
-        background-color:red;
-        height: 7rem;
-        width: 7rem;
-        top: 6rem;
-        right: 6rem;
-        border-radius: 50%;
-        z-index: 20;
-    }
-    &__background{
-        height: 6rem;
-        width: 6rem;
-        border-radius: 50%;
-        position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
-        background-image: radial-gradient($color-primary-light, $color-primary-dark);
-        z-index: 10 ;
-    }
-    &__nav{
-        height:100vh;
-        width: 100vw;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 15;
+.navigation {
+	&__checkbox {
+		display: none;
+	}
+	&__button {
+		height: 7rem;
+		width: 7rem;
+		top: 6rem;
+		right: 6rem;
+		border-radius: 50%;
+		z-index: 20;
+		position: fixed;
+	}
+	&__background {
+		height: 6rem;
+		width: 6rem;
+		border-radius: 50%;
+		position: fixed;
+		top: 6.5rem;
+		right: 6.5rem;
+		background-image: radial-gradient(
+			$color-primary-light,
+			$color-primary-dark
+		);
+		z-index: 10;
 
-        
-    }
-    &__list{
-        
-    }
-    &__item{
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        // flex-direction: column;
+		transform: scale(80);
+	}
+	&__nav {
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 15;
+	}
+	&__list {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		list-style: none;
+		text-align: center;
+	}
+	&__item {
 
-        // display: inline-block;
+        margin: 1.5rem;
 
-        //apply margin to all items except the last one
-        &:not(:last-child){
-            margin-right: $gutter-horizontal-small;
-        }
-    }
-    &__link{
-        &:link,
-        &:visited{
-            font-size: $default-font-size;
-            // color: $color-white;
-            text-decoration: none;
-            // without display inline block the text wont be transformed when hover
-            display: inline-block;
-        }
-    }
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		// flex-direction: column;
 
+		// display: inline-block;
 
-
+		//apply margin to all items except the last one
+	 
+	}
+	&__link {
+        font-size: 4rem;
+        font-weight: 300;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+		&:link,
+		&:visited {
+			font-size: $default-font-size;
+			// color: $color-white;
+			text-decoration: none;
+			// without display inline block the text wont be transformed when hover
+			display: inline-block;
+		}
+	}
 }
