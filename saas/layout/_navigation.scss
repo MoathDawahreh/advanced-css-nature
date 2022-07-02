@@ -43,8 +43,7 @@
 		text-align: center;
 	}
 	&__item {
-
-        margin: 1.5rem;
+		margin: 1.5rem;
 
 		// display: flex;
 		// align-items: center;
@@ -54,21 +53,33 @@
 		// display: inline-block;
 
 		//apply margin to all items except the last one
-	 
 	}
 	&__link {
-        font-size: 4rem;
-        font-weight: 300;
-        color: $color-white;
-        text-decoration: none;
-        text-transform: uppercase;
 		&:link,
 		&:visited {
-			font-size: $default-font-size;
-			// color: $color-white;
-			text-decoration: none;
-			// without display inline block the text wont be transformed when hover
 			display: inline-block;
+			font-size: 3rem;
+			font-weight: 300;
+			color: $color-white;
+			text-decoration: none;
+			padding: 1rem 2rem;
+			text-transform: uppercase;
+			background-size: 250%;
+
+			background-image: linear-gradient(
+				120deg,
+				transparent 0,
+				transparent 50%,
+				$color-white 50%
+			);
+			transition: all 0.5s ease-in-out;
+		}
+		&:hover,
+		&:active {
+			background-position: 100%;
+			color: $color-primary;
+			transform: translateX(2rem);
+		 
 		}
 	}
 }
