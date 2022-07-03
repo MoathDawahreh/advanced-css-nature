@@ -44,15 +44,6 @@
 	}
 	&__item {
 		margin: 1.5rem;
-
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
-		// flex-direction: column;
-
-		// display: inline-block;
-
-		//apply margin to all items except the last one
 	}
 	&__link {
 		&:link,
@@ -79,7 +70,6 @@
 			background-position: 100%;
 			color: $color-primary;
 			transform: translateX(2rem);
-		 
 		}
 	}
 }
