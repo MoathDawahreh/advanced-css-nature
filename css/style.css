@@ -716,6 +716,7 @@ body {
   border-radius: 50%;
   z-index: 20;
   position: fixed;
+  background-color: #fff;
 }
 .navigation__background {
   height: 6rem;
@@ -724,7 +725,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-image: radial-gradient(circle at 50% 50%, #28b485, #7ed56f);
   z-index: 10;
   transform: scale(80);
 }

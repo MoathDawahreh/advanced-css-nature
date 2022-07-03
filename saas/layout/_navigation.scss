@@ -10,6 +10,7 @@
 		border-radius: 50%;
 		z-index: 20;
 		position: fixed;
+		background-color: $color-white;
 	}
 	&__background {
 		height: 6rem;
@@ -19,8 +20,12 @@
 		top: 6.5rem;
 		right: 6.5rem;
 		background-image: radial-gradient(
-			$color-primary-light,
-			$color-primary-dark
+			circle at 50% 50%,
+			$color-primary-dark,
+			$color-primary-light
+		 
+
+		 
 		);
 		z-index: 10;
 
