@@ -28,7 +28,8 @@
 			opacity: 0;
 		}
 	}
-	&:active,&:focus {
+	&:active,
+	&:focus {
 		transform: translateY(
 			-1rem
 		); /*move the button down 1px after clicking on it(hold the click to notice the effect) */
@@ -64,10 +65,6 @@
 		transition: all 0.4s;
 	}
 
-	// &--white::after {
-	// 	background-color: $color-white;
-	// }
-
 	&--animated {
 		animation: moveInBottom 1s ease-out;
 		/* animation-fill-mode: backwards; */
@@ -85,7 +82,7 @@
 		font-size: $default-font-size;
 		font-weight: 700;
 		border: 0.1rem solid $color-primary;
- 		transition: all 0.5s;
+		transition: all 0.5s;
 		background-color: $color-white;
 		opacity: 0.6;
 		// box-shadow: 0rem 1rem 2rem rgba($color-black, 0.5);
