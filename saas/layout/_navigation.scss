@@ -11,6 +11,7 @@
 		z-index: 20;
 		position: fixed;
 		background-color: $color-white;
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 	}
 	&__background {
 		height: 6rem;
@@ -20,16 +21,12 @@
 		top: 6.5rem;
 		right: 6.5rem;
 		background-image: radial-gradient(
-			circle at 50% 50%,
-			$color-primary-dark,
-			$color-primary-light
-		 
-
-		 
+			$color-primary-light,
+			$color-primary-dark
 		);
 		z-index: 10;
 
-		transform: scale(80);
+		// transform: scale(80);
 	}
 	&__nav {
 		height: 100vh;
@@ -38,6 +35,11 @@
 		top: 0;
 		right: 0;
 		z-index: 15;
+
+		opacity: 0;
+		// with opacity the contents are hidden but still clickable and you can notice when hover / to solve that we use display: none or setting width to 0
+		display: none;
+		// width: 0;
 	}
 	&__list {
 		position: absolute;
@@ -68,7 +70,7 @@
 				transparent 50%,
 				$color-white 50%
 			);
-			transition: all 0.5s ease-in-out;
+			transition: all 0.25s ease-in-out;
 		}
 		&:hover,
 		&:active {
@@ -76,5 +78,13 @@
 			color: $color-primary;
 			transform: translateX(2rem);
 		}
+	}
+
+	&__checkbox:checked ~ &__background {
+		transform: scale(90);
+	}
+	&__checkbox:checked ~ &__nav {
+		opacity: 1;
+		display: block;
 	}
 }
