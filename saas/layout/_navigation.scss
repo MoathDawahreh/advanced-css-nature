@@ -34,7 +34,7 @@
 		width: 100vw;
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0; // by setting left to 0, the nav will be on the left side of the screen which means when we  animte it and width it to 100%  the animation will be from the left side of the screen to the center
 		z-index: 15;
 
 		opacity: 0;
