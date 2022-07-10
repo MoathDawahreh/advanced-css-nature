@@ -11,6 +11,7 @@
 		z-index: 20;
 		position: fixed;
 		background-color: $color-white;
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
 	}
 	&__background {
 		height: 6rem;
@@ -20,24 +21,28 @@
 		top: 6.5rem;
 		right: 6.5rem;
 		background-image: radial-gradient(
-			circle at 50% 50%,
-			$color-primary-dark,
-			$color-primary-light
-		 
-
-		 
+			$color-primary-light,
+			$color-primary-dark
 		);
 		z-index: 10;
+		transition: transform 0.7s ease-in-out;
 
-		transform: scale(80);
+		// transform: scale(80);
 	}
 	&__nav {
 		height: 100vh;
 		width: 100vw;
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0; // by setting left to 0, the nav will be on the left side of the screen which means when we  animte it and width it to 100%  the animation will be from the left side of the screen to the center
 		z-index: 15;
+
+		opacity: 0;
+		// with opacity the contents are hidden but still clickable and you can notice when hover / to solve that we use display: none or setting width to 0
+		// but I will use width here because it will be animated when use scale
+		// display: none;
+		width: 0;
+		transition: all 0.7s ease-in-out;
 	}
 	&__list {
 		position: absolute;
@@ -46,6 +51,7 @@
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
+		width: 100%;
 	}
 	&__item {
 		margin: 1.5rem;
@@ -68,7 +74,7 @@
 				transparent 50%,
 				$color-white 50%
 			);
-			transition: all 0.5s ease-in-out;
+			transition: all 0.25s ease-in-out;
 		}
 		&:hover,
 		&:active {
@@ -76,5 +82,14 @@
 			color: $color-primary;
 			transform: translateX(2rem);
 		}
+	}
+
+	&__checkbox:checked ~ &__background {
+		transform: scale(90);
+	}
+	&__checkbox:checked ~ &__nav {
+		opacity: 1;
+		// display: block;
+		width: 100%; // so here the width goes up from 0 to 100% with animation
 	}
 }
