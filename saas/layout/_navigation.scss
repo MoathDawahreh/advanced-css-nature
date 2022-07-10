@@ -25,6 +25,7 @@
 			$color-primary-dark
 		);
 		z-index: 10;
+		transition: transform 0.6s ease-in-out;
 
 		// transform: scale(80);
 	}
@@ -38,8 +39,10 @@
 
 		opacity: 0;
 		// with opacity the contents are hidden but still clickable and you can notice when hover / to solve that we use display: none or setting width to 0
-		display: none;
-		// width: 0;
+		// but I will use width here because it will be animated when use scale
+		// display: none;
+		width: 0;
+		transition: all 0.8s ease-in-out;
 	}
 	&__list {
 		position: absolute;
@@ -48,6 +51,7 @@
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
+		width: 100%;
 	}
 	&__item {
 		margin: 1.5rem;
@@ -85,6 +89,7 @@
 	}
 	&__checkbox:checked ~ &__nav {
 		opacity: 1;
-		display: block;
+		// display: block;
+		width: 100%; // so here the width goes up from 0 to 100% with animation
 	}
 }
