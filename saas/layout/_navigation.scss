@@ -12,6 +12,7 @@
 		position: fixed;
 		background-color: $color-white;
 		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+		text-align: center;
 	}
 	&__background {
 		height: 6rem;
@@ -91,5 +92,31 @@
 		opacity: 1;
 		// display: block;
 		width: 100%; // so here the width goes up from 0 to 100% with animation
+	}
+
+	//Icon
+	&__icon {
+		position: relative;
+		margin-top: 3.5rem;
+		&,
+		&::before,
+		&::after {
+			width: 3rem;
+			height: 0.2rem;
+			background-color: $color-gray-dark-4;
+			display: inline-block;
+		}
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+		}
+		&::before {
+			top: -1rem;
+		}
+		&::after {
+			top: 1rem;
+		}
 	}
 }
