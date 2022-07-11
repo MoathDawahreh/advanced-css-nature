@@ -705,6 +705,9 @@ body {
   padding-top: 1rem;
 }
 
+.navigation {
+  transition: transform 0.7s ease-in-out;
+}
 .navigation__checkbox {
   display: none;
 }
@@ -793,6 +796,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
+  transition: all 0.25s ease-in-out;
 }
 .navigation__icon::before {
   top: -0.8rem;
@@ -811,11 +815,11 @@ body {
 }
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
   top: 0;
-  transform: rotate(45deg);
+  transform: rotate(135deg);
 }
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
   top: 0;
-  transform: rotate(-45deg);
+  transform: rotate(-135deg);
 }
 
 .section-about {
