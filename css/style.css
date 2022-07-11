@@ -719,6 +719,7 @@ body {
   background-color: #fff;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   text-align: center;
+  cursor: pointer;
 }
 .navigation__background {
   height: 6rem;
@@ -794,10 +795,27 @@ body {
   left: 0;
 }
 .navigation__icon::before {
-  top: -1rem;
+  top: -0.8rem;
 }
 .navigation__icon::after {
+  top: 0.8rem;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+.navigation__button:hover .navigation__icon::after {
   top: 1rem;
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .section-about {
