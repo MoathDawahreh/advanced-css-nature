@@ -4,7 +4,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: rgb($color-primary-dark, 0.8);
+	background-color: rgb($color-gray-dark-4, 0.9);
 
 	z-index: 100;
 	&__content {
@@ -12,6 +12,6 @@
 		width: 75%;
 		height: 50rem;
 		background-color: $color-white;
-		box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+		box-shadow: 0 2rem 4rem rgba($color-gray-dark-4, 0.2);
 	}
 }

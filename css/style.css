@@ -585,7 +585,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(40, 180, 133, 0.8);
+  background-color: rgba(34, 34, 34, 0.9);
   z-index: 100;
 }
 .popup__content {
@@ -596,7 +596,7 @@ body {
   width: 75%;
   height: 50rem;
   background-color: #fff;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 4rem rgba(34, 34, 34, 0.2);
 }
 
 .header {
