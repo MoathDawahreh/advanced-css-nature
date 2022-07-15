@@ -34,5 +34,15 @@
 	&__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
+		column-count: 2;
+		column-gap: 3rem;
+		column-rule: .1rem solid $color-gray-light-3;
+
+		
+
+		hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-webkit-hyphens: auto; // for Safari
 	}
 }
