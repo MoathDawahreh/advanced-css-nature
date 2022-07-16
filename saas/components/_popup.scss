@@ -7,6 +7,17 @@
 	background-color: rgb($color-gray-dark-4, 0.9);
 
 	z-index: 100;
+	// hidden the popup and visablity to hidden to hide the content
+	opacity: 0;
+	visibility: hidden;
+
+	// here when the target is clicked, the popup will be shown
+	// that could be done by creating an id for the popup and then using the id to target the popup by adding it to the herf attribute of the button
+	&:target {
+		opacity: 1;
+		visibility: visible;
+	}
+
 	&__content {
 		@include absCenter; // mixin to center the content
 		width: 75%;

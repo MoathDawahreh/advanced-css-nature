@@ -587,6 +587,12 @@ body {
   left: 0;
   background-color: rgba(34, 34, 34, 0.9);
   z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
 }
 .popup__content {
   position: absolute;
