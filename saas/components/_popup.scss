@@ -20,6 +20,22 @@
 		opacity: 1;
 		visibility: visible;
 	}
+	&__close {
+		position: absolute;
+		top: 2.5rem;
+		right: 2.5rem;
+		// padding: 0.5rem;
+		cursor: pointer;
+		transition: opacity 0.8s ease-in-out;
+		text-decoration: none;
+		font-size: 3rem;
+		display: inline-block;
+		color: $color-gray-dark;
+		&:hover {
+			// opacity: 0.8;
+			color: $color-primary;
+		}
+	}
 
 	&__content {
 		@include absCenter; // mixin to center the content
