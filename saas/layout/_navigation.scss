@@ -116,7 +116,6 @@
 		}
 		&::before {
 			top: -0.8rem;
-			 
 		}
 		&::after {
 			top: 0.8rem;
@@ -124,7 +123,8 @@
 	}
 	&__button:hover &__icon::before {
 		top: -1rem;
-	}		transition: transform 0.7s ease-in-out;
+	}
+	transition: transform 0.7s ease-in-out;
 	&__button:hover &__icon::after {
 		top: 1rem;
 	}

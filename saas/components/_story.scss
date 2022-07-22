@@ -9,7 +9,7 @@
 
 	font-size: $default-font-size;
 	transform: skew(-12deg);
-		backface-visibility: hidden;
+	backface-visibility: hidden;
 
 	// & > * {
 	//     transform: skew(  12deg);
@@ -63,6 +63,6 @@
 	}
 	&:hover &__img {
 		transform: translateX(0) scale(1);
-		filter:blur(5px) brightness(80%);
+		filter: blur(5px) brightness(80%);
 	}
 }
