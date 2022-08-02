@@ -37,14 +37,17 @@ html {
   //   @include respond(phone) {
   //     font-size: 50%;
   //   }
-// with media queries we should always set the larger ones before, so below tab-land should be before tab-port. -desktop is based on min not max-
-  @include respond(tab-land) { // width < 1200?
+  // with media queries we should always set the larger ones before, so below tab-land should be before tab-port. -desktop is based on min not max-
+  // because both are less than the same size  so the last one will be applied
+  @include respond(tab-land) {
+    // width < 1200?
     font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
   }
-  @include respond(tab-port) { // wdth < 900?
+  @include respond(tab-port) {
+    // wdth < 900?
     font-size: 50%; // 1 rem = 8px, 8/16 = 50%
   }
-  
+
   @include respond(desktop) {
     font-size: 75%; // 1 rem = 12px, 12/16 = 75%
   }
@@ -52,4 +55,8 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
