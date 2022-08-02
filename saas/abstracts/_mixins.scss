@@ -1,14 +1,47 @@
 @mixin clearfix {
-	&:after {
-		content: '';
-		display: table;
-		clear: both;
-	}
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absCenter {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Media Queries
+/*
+    0 - 600px: phone
+	600px - 960px: tablet
+	960px - 1200px: laptop
+	1200px - 1800px: desktop
+	1800px + : large desktop
+	
+*/
+// the content below is like a dynamic proprites so we can apply this mixin -@include respond-phone {}- whenever we want with different sizes
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+/*
+- phone
+tab-port
+tab-land
+desktop
+*/
+
+// MEDIA QUERYS MANAGER //
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
 }
