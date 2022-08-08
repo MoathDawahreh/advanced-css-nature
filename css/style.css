@@ -587,6 +587,23 @@ body {
   transform: skew(-12deg);
   backface-visibility: hidden;
 }
+@media (max-width: 56.25em) {
+  .story {
+    width: 100%;
+    padding: 3rem;
+    font-size: 1.6rem;
+    transform: skew(0deg);
+    backface-visibility: hidden;
+  }
+}
+@media (max-width: 37.5em) {
+  .story {
+    padding: 3rem;
+    font-size: 1.6rem;
+    transform: skew(0deg);
+    backface-visibility: hidden;
+  }
+}
 .story__shape {
   width: 15rem;
   height: 15rem;
@@ -596,6 +613,11 @@ body {
   clip-path: circle(50% at 50% 50%);
   -webki-clip-path: circle(50% at 50% 50%);
   transform: translateX(-10%) skew(12deg);
+}
+@media (max-width: 37.5em) {
+  .story__shape {
+    transform: translateX(-10%) skew(0deg);
+  }
 }
 .story__img {
   width: 100%;
@@ -612,6 +634,11 @@ body {
 }
 .story__text {
   transform: skew(12deg);
+}
+@media (max-width: 37.5em) {
+  .story__text {
+    transform: skew(0deg);
+  }
 }
 .story__caption {
   position: absolute;
