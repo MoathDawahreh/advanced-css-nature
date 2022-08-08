@@ -491,17 +491,24 @@ body {
 @media (max-width: 56.25em) {
   .card {
     height: auto;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
   }
   .card__side {
     height: auto;
     position: relative;
-    border-radius: 0.5rem;
+    box-shadow: none;
   }
   .card__side--back {
     transform: rotateY(0);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   }
   .card:hover .card__side--front {
     transform: rotateY(0);
+  }
+  .card__details {
+    padding: 2rem;
   }
   .card_cta {
     position: relative;
@@ -509,12 +516,13 @@ body {
     top: 0%;
     transform: translate(0);
     width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
   }
   .card__price-box {
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
   .card__price-value {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 }
 
