@@ -774,6 +774,13 @@ body {
   opacity: 0;
   visibility: hidden;
 }
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  .popup {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
 .popup__content {
   position: absolute;
   top: 50%;
@@ -849,9 +856,9 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-@media (min-resolution: 2dppx) and (max-width: 125em) {
+@media (min-resolution: 2dppx) and (max-width: 125em), (-webkit-device-pixel-ratio: 2) and (max-width: 125em) {
   .header {
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
+    background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   }
 }
 @media (max-width: 56.25em) {
