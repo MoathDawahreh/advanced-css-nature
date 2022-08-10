@@ -184,7 +184,8 @@
     font-weight: 300;
   }
   // rewrite cards for smaller screens
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+    @media only screen and (max-width:56.25em), only screen and (hover:none){ // using hover:none here to detect touch devices, if there's no hovering then show the whole card
     height: auto;
     border-radius: 0.5rem;
     background-color: $color-white;
