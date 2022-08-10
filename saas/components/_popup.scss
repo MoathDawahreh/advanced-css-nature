@@ -11,6 +11,16 @@
 	opacity: 0;
 	visibility: hidden;
 
+
+	 @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) { // check if the browser supports the -webkit-backdrop-filter property or the backdrop-filter property if yes then apply this
+		background-color: transparent;
+		// background-color: rgb($color-gray-dark-4, 0.25);
+		-webkit-backdrop-filter: blur(10px); //for safari browser
+		backdrop-filter: blur(10px);// blur the background 
+
+
+	 }
+
 	//animation for the popup
 	// transition: opacity 0.8s ease-in-out;
 
