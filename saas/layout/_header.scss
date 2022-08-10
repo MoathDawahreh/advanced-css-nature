@@ -12,7 +12,7 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-  @media (min-resolution: 2dppx) and (max-width: 125em),
+  @media only screen and (min-resolution: 2dppx) and (max-width: 125em),
     (-webkit-device-pixel-ratio: 2) and (max-width: 125em) {
     background-image: linear-gradient(
         to right bottom,

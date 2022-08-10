@@ -6,10 +6,10 @@
   display: flex;
   @include respond(tab-port) {
     display: block;
-	max-width: 50rem;
-	padding: 0 3rem;
+    max-width: 50rem;
+    padding: 0 3rem;
   }
-   
+
   &:not(:last-child) {
     // setting marging bottom to all elemnts expect the last child
     margin-bottom: $gutter-vertical;

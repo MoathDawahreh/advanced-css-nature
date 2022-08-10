@@ -1,98 +1,97 @@
 .popup {
-	height: 100vh;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgb($color-gray-dark-4, 0.9);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb($color-gray-dark-4, 0.9);
 
-	z-index: 100;
-	// hidden the popup and visablity to hidden to hide the content
-	opacity: 0;
-	visibility: hidden;
+  z-index: 100;
+  // hidden the popup and visablity to hidden to hide the content
+  opacity: 0;
+  visibility: hidden;
 
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    // check if the browser supports the -webkit-backdrop-filter property or the backdrop-filter property if yes then apply this
+    background-color: transparent;
+    // background-color: rgb($color-gray-dark-4, 0.25);
+    -webkit-backdrop-filter: blur(10px); //for safari browser
+    backdrop-filter: blur(10px); // blur the background
+  }
 
-	 @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) { // check if the browser supports the -webkit-backdrop-filter property or the backdrop-filter property if yes then apply this
-		background-color: transparent;
-		// background-color: rgb($color-gray-dark-4, 0.25);
-		-webkit-backdrop-filter: blur(10px); //for safari browser
-		backdrop-filter: blur(10px);// blur the background 
+  //animation for the popup
+  // transition: opacity 0.8s ease-in-out;
 
+  // here when the target is clicked, the popup will be shown
+  // that could be done by creating an id for the popup and then using the id to target the popup by adding it to the herf attribute of the button
 
-	 }
+  &__content {
+    @include absCenter; // mixin to center the content
+    width: 75%;
+    // height: 50rem;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-gray-dark-4, 0.2);
+    display: table;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); // we can not do two transforms at the same time -here include has a transform- so we have to put the two transforms in one like this
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-	//animation for the popup
-	// transition: opacity 0.8s ease-in-out;
+  &__left {
+    width: 33.33333%;
+    display: table-cell;
+  }
+  &__right {
+    width: 66.66666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 0.1rem solid $color-gray-light-3;
 
-	// here when the target is clicked, the popup will be shown
-	// that could be done by creating an id for the popup and then using the id to target the popup by adding it to the herf attribute of the button
-
-	&__content {
-		@include absCenter; // mixin to center the content
-		width: 75%;
-		// height: 50rem;
-		background-color: $color-white;
-		box-shadow: 0 2rem 4rem rgba($color-gray-dark-4, 0.2);
-		display: table;
-		border-radius: 0.3rem;
-		overflow: hidden;
-		opacity: 0;
-		transform: translate(-50%, -50%) scale(0); // we can not do two transforms at the same time -here include has a transform- so we have to put the two transforms in one like this
-		transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-	}
-	&:target {
-		opacity: 1;
-		visibility: visible;
-	}
-	&:target &__content {
-		opacity: 1;
-		transform: translate(-50%, -50%) scale(1);
-	}
-
-	&__left {
-		width: 33.33333%;
-		display: table-cell;
-	}
-	&__right {
-		width: 66.66666%;
-		display: table-cell;
-		vertical-align: middle;
-		padding: 3rem 5rem;
-	}
-	&__img {
-		display: block;
-		width: 100%;
-	}
-	&__text {
-		font-size: 1.4rem;
-		margin-bottom: 4rem;
-		column-count: 2;
-		column-gap: 3rem;
-		column-rule: 0.1rem solid $color-gray-light-3;
-
-		hyphens: auto;
-		-moz-hyphens: auto;
-		-ms-hyphens: auto;
-		-webkit-hyphens: auto; // for Safari
-	}
-	&__close {
-		&:link,
-		:visited {
-			position: absolute;
-			top: 2.5rem;
-			right: 2.5rem;
-			// padding: 0.5rem;
-			cursor: pointer;
-			transition: opacity 0.8s ease-in-out;
-			text-decoration: none;
-			font-size: 3rem;
-			display: inline-block;
-			color: $color-gray-dark;
-			line-height: 1;
-		}
-		&:hover {
-			// opacity: 0.8;
-			color: $color-primary;
-		}
-	}
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto; // for Safari
+  }
+  &__close {
+    &:link,
+    :visited {
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      // padding: 0.5rem;
+      cursor: pointer;
+      transition: opacity 0.8s ease-in-out;
+      text-decoration: none;
+      font-size: 3rem;
+      display: inline-block;
+      color: $color-gray-dark;
+      line-height: 1;
+    }
+    &:hover {
+      // opacity: 0.8;
+      color: $color-primary;
+    }
+  }
 }
